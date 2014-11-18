@@ -1,4 +1,5 @@
 class FlatsController < ApplicationController
+
   def new
     @flat = Flat.new
   end
@@ -16,6 +17,10 @@ class FlatsController < ApplicationController
       end
     end
 
+  end
+
+  def show
+    @flat = Flat.find(params[:id])
   end
 
   def flat_params
