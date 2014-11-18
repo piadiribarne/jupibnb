@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+ruby '2.1.2'
+gem 'rails_12factor', group: :production
+
 gem 'figaro'
 
 gem 'aws-sdk'
