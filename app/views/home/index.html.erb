@@ -11,7 +11,7 @@
   <tbody>
     <% @flats.each do |flat| %>
       <tr>
-        <td><%= flat.image %></td>
+        <td><%= image_tag flat.picture.url(:medium) %></td>
         <td><%= flat.city %></td>
         <td><%= flat.availability %></td>
         <td><%= link_to 'View details & book', flat %></td>
