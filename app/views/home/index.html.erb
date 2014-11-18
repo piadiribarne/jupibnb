@@ -1,2 +1,26 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Welcome to JuPiBnB</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>List of flats</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flats.each do |flat| %>
+      <tr>
+        <td><%= flat.image %></td>
+        <td><%= flat.city %></td>
+        <td><%= flat.availability %></td>
+        <td><%= link_to 'View details & book', flat %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add flat for rent', new_flat_path %>
+
