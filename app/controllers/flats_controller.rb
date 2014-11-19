@@ -24,7 +24,17 @@ class FlatsController < ApplicationController
   end
 
   def flat_params
-    params.require(:flat).permit(:city, :description, :availability)
+    params.require(:flat).permit(:city, :description, :availability, :picture)
   end
+
+  def destroy
+  @flat = Flat.find(params[:id])
+   @flat.destroy
+   respond_to do |format|
+     format.html { redirect_to root_path, notice: 'flat was successfully deleted.' }
+     format.json { head :no_content }
+   end
+ end
+
 end
 

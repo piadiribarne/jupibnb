@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'omniauth-facebook'
+
 ruby '2.1.2'
 gem 'rails_12factor', group: :production
 

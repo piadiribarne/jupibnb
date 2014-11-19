@@ -18,12 +18,25 @@
  </div>
 
  <div class="field">
+   <%= f.label :description %><br>
+   <%= f.text_field :description %>
+ </div>
+
+ <div class="field">
    <%= f.label :availability %><br>
    <%= f.check_box :availability %>
  </div>
 
  <div class="field">
-   <%= f.label :picture %><br>
+   <%= f.label :pictures %><br>
+   <%= f.file_field :picture %>
+ </div>
+
+  <div class="field">
+   <%= f.file_field :picture %>
+ </div>
+
+  <div class="field">
    <%= f.file_field :picture %>
  </div>
 
