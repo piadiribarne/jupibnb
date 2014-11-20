@@ -1,2 +1,9 @@
+// Customize Bootstrap with variables: http://getbootstrap.com/customize/#less-variables
+$link-color: #2ecc71;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+img {
+  max-width: 100%;
+}
