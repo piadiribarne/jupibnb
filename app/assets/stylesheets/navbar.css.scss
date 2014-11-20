@@ -1,14 +1,14 @@
 // Set your navbar general settings
-$color: white;
-$bg: transparent;
-$height: 30px;
-$vertical-padding: 10px;
-$horizontal-padding: 50px;
+$color: #ecf0f1;
+$bg: #34495e;
+$height: 50px;
+$vertical-padding: 20px;
+$horizontal-padding: 20px;
 $border-bottom-width: 0;
-$border-bottom-color: grey;
+$border-bottom-color: blue;
 
 // Set your navbar button
-$btn-height: 40px;
+$btn-height: 50px;
 $btn-bg: lightgrey;
 $btn-color: black;
 $btn-horizontal-padding: 10px;
@@ -30,7 +30,7 @@ $profile-border-width: 2px;
 // And do not look at what follows!
 // This is why we use sass :)
 .navbar-wagon{
-  background: $bg;
+  background-color: $bg;
   border: none;
   font-weight: 400;
   padding-left: $horizontal-padding;
@@ -103,7 +103,7 @@ $btn-margin-top: ($height + 2 * $vertical-padding - $btn-height - $btn-top-borde
 }
 
 #logo{
-  height: $height;
+  height: 60px;
   padding: 0px;
 }
 
