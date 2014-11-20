@@ -1,0 +1,17 @@
+// Customize Bootstrap with variables: http://getbootstrap.com/customize/#less-variables
+$link-color: #2ecc71;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+img {
+  max-width: 100%;
+}
+
+.main-title {
+  color: blue;
+  font-size: 50px;
+}
