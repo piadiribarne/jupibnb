@@ -50,3 +50,4 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'bootstrap-sass', '~> 3.3.0'
+gem 'font-awesome-sass', '~> 4.2.0'
