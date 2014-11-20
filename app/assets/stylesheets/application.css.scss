@@ -3,6 +3,7 @@ $link-color: #2ecc71;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "navbar";
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
@@ -16,4 +17,9 @@ img {
 .main-title {
   color: blue;
   font-size: 50px;
+  padding-top: 30px
+}
+
+.row  {
+  padding-top: 30px
 }
