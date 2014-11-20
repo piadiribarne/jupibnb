@@ -1,2 +1,22 @@
-<h1>Book a Flat NOW!</h1>
-<%= link_to 'Back', root_path %>
+<div class="container">
+
+
+  <div class="row">
+    <div class="col-xs-4">
+      <%= image_tag @flat.picture %>
+    </div>
+    <div class="col-xs-8">
+      <h3> Flat info </h3>
+      <ul>
+      <li>Location: <%= @flat.city %></li>
+      <li>Description: <%= @flat.description %></li>
+      <li>Availability: <%= @flat.availability %></li>
+      </ul>
+      <button type="button" class="btn btn-danger" >Book Now</button>
+     </div>
+  </div>
+  <%= link_to 'Back', root_path %>
+</div>
+
+
+
