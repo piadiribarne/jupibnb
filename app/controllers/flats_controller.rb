@@ -6,6 +6,7 @@ class FlatsController < ApplicationController
 
   def create
     @flat = Flat.new(flat_params)
+    @flat.user = current_user
 
     respond_to do |format|
       if @flat.save
@@ -20,6 +21,7 @@ class FlatsController < ApplicationController
   end
 
   def show
+    skip_before_action :authenticate_user!
     @flat = Flat.find(params[:id])
   end
 
@@ -28,12 +30,13 @@ class FlatsController < ApplicationController
   end
 
   def destroy
-  @flat = Flat.find(params[:id])
-   @flat.destroy
-   respond_to do |format|
-     format.html { redirect_to root_path, notice: 'flat was successfully deleted.' }
-     format.json { head :no_content }
-   end
+    @flat = Flat.find(params[:id])
+    if @flat.user == current_user
+      @flat.destroy
+      redirect_to root_path, notice: 'flat was successfully deleted.'
+    else
+      redirect_to root_path, error: 'you do not own this flat.'
+    end
  end
 
 end
