@@ -1,5 +1,7 @@
 // Customize Bootstrap with variables: http://getbootstrap.com/customize/#less-variables
-$link-color: #2ecc71;
+$link-color: #3498db;
+$input-bg: rgba(52, 152, 219, 0.8);
+$input-color: white;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -10,21 +12,51 @@ $link-color: #2ecc71;
 
 @import "navbar";
 
+
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper{
+  min-height: 500px;
+}
+
 img {
   max-width: 100%;
 }
 
 .main-title {
-  color: blue;
+  color: #9b59b6;
   font-size: 50px;
-  padding-top: 30px
+  padding-top: 20px;
+  font-family: 'Pacifico', cursive;
 }
 
 .row  {
-  padding-top: 30px
+  padding-top: 20px
 }
 
 .footer {
   background: #34495e;
   color: white
+}
+
+.btn {
+  margin: 5px
+}
+
+.website-background {
+  background-image: url('background2.png');
+}
+
+.box {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.transparent {
+  background-color:none;
 }

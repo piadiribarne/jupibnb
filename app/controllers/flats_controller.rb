@@ -21,7 +21,6 @@ class FlatsController < ApplicationController
   end
 
   def show
-    skip_before_action :authenticate_user!
     @flat = Flat.find(params[:id])
   end
 
@@ -35,7 +34,7 @@ class FlatsController < ApplicationController
       @flat.destroy
       redirect_to root_path, notice: 'flat was successfully deleted.'
     else
-      redirect_to root_path, error: 'you do not own this flat.'
+      redirect_to root_path, alert: 'you do not own this flat.'
     end
  end
 

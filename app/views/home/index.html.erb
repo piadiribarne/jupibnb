@@ -1,41 +1,39 @@
-<div class='container'>
+<div class="website-background">
 
-  <h1 class="main-title text-center">
-    Welcome to JuPiBnB <i class="fa fa-binoculars"></i>
-  </h1>
+  <div class='container'>
+    <div class="row text-center">
+      <div class="col-xs-12">
+        <h1 class="main-title text-center">
+          Welcome to JuPiBnB <i class="fa fa-binoculars"></i>
+        </h1>
 
-  <div class="row">
+        <div class="text-center">
+          <%= link_to 'Add flat for rent', new_flat_path, class:"btn btn-info" %>
+        </div>
+      </div>
+    </div>
 
-    <% @flats.each do |flat| %>
-      <!-- <tr>
-        <td><%= image_tag flat.picture.url(:medium) %></td>
-        <td><%= flat.city %></td>
-        <td><%= flat.availability %></td>
-        <td><%= link_to 'View details & book', flat %></td>
-        <td><%= link_to 'Delete flat', flat, method: :delete, data: {confirm: 'are you sure?'} %></td>
-      </tr> -->
+    <div class="row">
 
-      <div class="col-lg-6 text-center">
-        <div class="row">
-          <div class="col-sm-6">
-            <%= image_tag flat.picture.url(:medium) %>
-          </div>
-          <div class="col-sm-6">
-            <%= flat.city %>
-            <%= flat.availability %></td>
-            <%= link_to 'View details & book', flat %>
-           <%= link_to 'Delete flat', flat, method: :delete, data: {confirm: 'are you sure?'} %>
+      <% @flats.each do |flat| %>
+        <div class="col-xs-6">
+          <div class="box">
+            <div class="row">
+              <div class="col-xs-8 text-center">
+                <%= image_tag flat.picture.url(:medium) %>
+                <p><%= flat.city %></p>
+              </div>
+              <div class="col-xs-4">
+                <p><%= link_to 'Show', flat, class: "btn btn-primary" %></p>
+                <p><%= link_to 'Delete', flat, method: :delete, data: {confirm: 'are you sure?'}, class: "btn btn-primary"  %></p>
+              </div>
+            </div>
           </div>
         </div>
+      <% end %>
 
-      </div>
+    </div>
 
-    <% end %>
-
-  </div>
-
-
-  <%= link_to 'Add flat for rent', new_flat_path %>
 
 </div>
 
